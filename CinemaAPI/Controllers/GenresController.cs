@@ -41,7 +41,7 @@ namespace CinemaAPI.Controllers
 
                 if (genre is not null)
                 {
-                    genre.Name = dto.GenreName;
+                    genre.Name = dto.Name;
 
                     await _context.SaveChangesAsync();
 
@@ -55,9 +55,9 @@ namespace CinemaAPI.Controllers
         [HttpPost]
         public async Task<IActionResult> AddGenreAsync(GenreDTO dto)
         {
-            if (dto.GenreName is not null)
+            if (dto.Name is not null)
             {
-                Genre genre = new() { Name = dto.GenreName };
+                Genre genre = new() { Name = dto.Name };
 
                 await _context.Genres.AddAsync(genre);
 

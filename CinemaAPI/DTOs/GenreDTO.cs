@@ -5,6 +5,6 @@ namespace CinemaAPI.DTOs
     public class GenreDTO
     {
         [Length(3,50)]
-        public string? GenreName { get; set; }
+        public string Name { get; set; }
     }
 }

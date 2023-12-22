@@ -6,7 +6,7 @@ namespace CinemaAPI.Models
     {
         public int Id { get; set; }
 
-        [MaxLength(50)]
-        public string? Name { get; set; }
+        [Length(3, 50)]
+        public string Name { get; set; }
     }
 }
